@@ -11,3 +11,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body {
+  background: #191919;
+  color: white;
+}
+
+a {
+  color: red;
+}
+
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}

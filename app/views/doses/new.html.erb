@@ -1,0 +1,26 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80);">
+  <div class="container text-center">
+    <h1><%= @cocktail.name.upcase %></h1>
+  </div>
+</div>
+
+<div class="container pt-5 pb-3">
+  <h2>ADD INGREDIENTS</h2>
+
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: "btn btn-danger" %>
+  <% end %>
+
+  <%= link_to "Go back to cocktail", cocktail_path(@cocktail), class: "btn btn-light my-5"  %>
+
+</div>
+
+
+
+
+
+
+
+
