@@ -8,7 +8,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -17,15 +16,15 @@
         <%= image_tag "LOGO.png", alt: "alttext", width: 200 %>
       </a>
     </nav>
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-    <%= javascript_pack_tag "application" %>
 
+    <%= yield %>
 
     <footer id="sticky-footer" class="py-4 bg-black text-white-50">
        <div class="container text-center">
          <small>Copyright &copy; COCKTAILEROO</small>
        </div>
      </footer>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>
